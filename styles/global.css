@@ -8,6 +8,7 @@ body {
   min-width: 1100px;
   margin: 0;
   font-family: Raleway, sans-serif;
+  color: #000;
 }
 
 h1,
@@ -31,4 +32,22 @@ a {
 
 img {
   width: 100%;
+}
+
+address {
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Reset button styles.
+ */
+ button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
 }
