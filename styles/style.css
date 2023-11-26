@@ -5,19 +5,19 @@
   box-sizing: border-box;
 }
 
+/*для теста гитхаба коммент*/
 .header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding: 92px 50px;
+  padding: 70px 50px; /*1) 92px PP*/
   font-size: 18px;
   font-weight: 400;
   align-items: center;
 }
 
 .header-menu {
-  /*не понадобилось*/
 }
-/*1) есть отступ перед первым пунктом меню*/
+
 .header-menu-list {
   list-style: circle;
   display: flex;
@@ -26,7 +26,7 @@
 
 .header-menu-item {
   margin-right: 30px;
-  padding-left: 10px;
+  /* padding-left: 10px; PP*/
 }
 
 .header-menu-list li:last-child {
@@ -37,20 +37,20 @@
   text-underline-offset: 4px;
 }
 
+.menu-link-active {
+  text-decoration: none;
+}
+
 .nodisk {
   list-style: none;
 }
 
-.left {
-  justify-self: start;
-}
-
-.center {
-  justify-self: center;
-}
-
-.right {
+.header-contacts {
   justify-self: end;
+}
+
+.header__logo {
+  justify-self: center;
 }
 
 .logo {
@@ -62,6 +62,11 @@
   font-size: 18px;
   font-weight: 400;
   line-height: 1.35;
+  max-width: 240px;
+}
+
+.contacts-links {
+  display: block;
 }
 
 /*все секция*/
@@ -93,31 +98,30 @@
   position: relative;
   color: #fff;
   font-size: 100px;
-  padding-top: 165px;
   letter-spacing: 30px;
-  padding-bottom: 147px;
+  padding: 165px 50px 147px; /*padding: 165px 50px 147px;*/
 }
 
 /*классы для выравнивания строк текста и превращения 
 их в блочный элемент*/
 
 .aligned-text {
-  padding-left: 50px;
   display: block;
   line-height: 1.15;
 }
 
 .aligned-text_center {
-  display: block;
   line-height: 1;
   text-align: center;
 }
 
 .aligned-text_right {
-  padding-right: 50px;
-  display: block;
   line-height: 1;
   text-align: right;
+}
+
+.aligned-text_right_last {
+  letter-spacing: 0px;
 }
 
 /*класс для управления 
@@ -133,6 +137,14 @@
   letter-spacing: 0;
 }
 
+/*не нашла другого решения*/
+.aligned-text-center--down {
+  transform: translateY(20px);
+}
+
+.aligned-text--down {
+  transform: translateY(40px);
+}
 /*контейнер для подзаголовка и кнопки*/
 
 .cover__description {
@@ -141,7 +153,8 @@
   display: flex;
   justify-content: end;
   align-items: center;
-  padding-bottom: 62px;
+  padding-bottom: 32px; /*62px PP*/
+  padding-top: 30px; /*PP*/
 }
 
 /*текст подзаголовка*/
@@ -153,13 +166,14 @@
   text-transform: uppercase;
   font-style: normal;
   font-weight: 400;
-  word-spacing: 22px;
+  word-spacing: 19px;
   margin-right: 78px;
 }
 
 /*кнопка «Сделать ставку»*/
 .bet-button {
   color: #fff;
+  font-family: Raleway;
   text-align: center;
   font-size: 22px;
   font-style: normal;
@@ -167,7 +181,7 @@
   line-height: normal;
   text-transform: uppercase;
   background-color: transparent;
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   padding: 12px 32px;
   margin-right: 50px;
 }
@@ -193,7 +207,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 
 /*пункт списка карточки*/
@@ -222,24 +236,23 @@
   color: #fff;
   font-size: 20px;
   position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /*классы, чтобы задать определённый фон каждой из карточек*/
 
 .card_type_film {
   background-image: url(../images/card-lot-01.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
 }
 
 .card_type_book {
   background-image: url(../images/card-lot-02.jpg);
-  background-size: contain;
 }
 
 .card_type_picture {
   background-image: url(../images/card-lot-03.jpg);
-  background-size: contain;
 }
 
 /*overlay — он уже есть у вас в коде;*/
@@ -266,7 +279,11 @@
 
 /*ссылка «Посмотреть больше»*/
 .lots__look-more-link {
-  /*  margin-top: 30px;*/
+  margin-left: 40px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 /*вся секция;*/
@@ -280,7 +297,8 @@
 
 /*класс для колонок;*/
 .about__column {
-  margin-bottom: 41px;
+  margin-bottom: 30px;
+  margin-top: 5px;
 }
 
 /*контейнер с логотипом;*/
@@ -316,24 +334,29 @@
   font-weight: 400;
 }
 
-.about__text > p:first-child {
+.about__text-text {
   margin-bottom: 25px;
+}
+
+.about__text p:last-child {
+  margin-bottom: 0px;
 }
 
 /*подвал;*/
 .footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding: 139px 50px;
+  padding: 155px 50px 90px;
   font-size: 18px;
   font-weight: 400;
-  align-items: center;
+  /* align-items: center;*/
 }
 
 /*блок навигации по списку ссылок. Мы рекомендуем окружать список тегом <nav> с этим классом;*/
 
 .footer__menu {
-  /**/
+  max-width: 240px;
+  justify-self: center;
 }
 
 /*список пунктов меню;*/
@@ -342,8 +365,9 @@
 }
 
 /*пункт списка меню;*/
-.footer__menu-list-item {
-}
+/*.footer__menu-list-item {
+
+}*/
 
 .footer-menu-list li:last-child {
   margin-right: 0;
@@ -355,13 +379,15 @@
 }
 
 /*активная ссылка меню (без подчеркивания);*/
-.footer__menu-link_active {
-}
+/*.footer__menu-link_active {
+
+}*/
 
 /*список ссылок на социальные сети. Можно не добавлять тег <nav>, потому что это ссылки на внешние ресурсы;*/
 .footer__social-list {
   display: flex;
   flex-direction: row;
+  justify-self: end;
 }
 
 /*пункт списка ссылок на социальные сети;*/
@@ -369,9 +395,15 @@
   margin-left: 48px;
 }
 
-/*ссылка на социальные сети;*/
-.footer__social-link {
+/*У первого элемента в группе необходимо сбросить нижний отступ, я вроде сбросила, но не поняля зачем :) */
+.footer__social-list-item:first-child {
+  margin-bottom: 0;
 }
+
+/*ссылка на социальные сети;*/
+/*.footer__social-link {
+
+}*/
 
 /*иконка социальной сети.*/
 .footer__social-icon {
