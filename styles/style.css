@@ -5,18 +5,24 @@
   box-sizing: border-box;
 }
 
-/*для теста гитхаба коммент*/
+/*привет, вернула 92px, https://clip2net.com/s/4jPQdom 
+да, 70 я подогнала под PP признаюсь, сейчас увидела ошибку 
+в лого из-за которой шапка не совпадала, 80 не могу найти(
+  у меня вроде стоит идеально https://clip2net.com/s/4jPQhyW
+  но я не могу понять, действительно надо делать такие 
+  ситуации https://clip2net.com/s/4jPQk2u ? p.s. но я сделала если что 
+  https://clip2net.com/s/4jPQKBy*/
 .header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding: 70px 50px; /*1) 92px PP*/
+  padding: 92px 50px; /*1) 92px PP*/
   font-size: 18px;
   font-weight: 400;
   align-items: center;
 }
 
-.header-menu {
-}
+/*.header-menu {
+}*/
 
 .header-menu-list {
   list-style: circle;
@@ -26,7 +32,7 @@
 
 .header-menu-item {
   margin-right: 30px;
-  /* padding-left: 10px; PP*/
+  padding-left: 2px; /*PP*/
 }
 
 .header-menu-list li:last-child {
@@ -55,7 +61,7 @@
 
 .logo {
   width: 148px;
-  height: 145px;
+  height: 105px;
 }
 
 .contacts {
@@ -63,10 +69,6 @@
   font-weight: 400;
   line-height: 1.35;
   max-width: 240px;
-}
-
-.contacts-links {
-  display: block;
 }
 
 /*все секция*/
@@ -91,6 +93,17 @@
 }
 
 /*заголовок*/
+/*.cover__title { без flex 111
+  text-transform: uppercase;
+  color: #fff;
+  z-index: 1;
+  position: relative;
+  color: #fff;
+  font-size: 100px;
+  letter-spacing: 30px;
+  padding: 145px 50px 134px;
+}*/
+
 .cover__title {
   text-transform: uppercase;
   color: #fff;
@@ -99,7 +112,10 @@
   color: #fff;
   font-size: 100px;
   letter-spacing: 30px;
-  padding: 165px 50px 147px; /*padding: 165px 50px 147px;*/
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding: 165px 50px 134px;
 }
 
 /*классы для выравнивания строк текста и превращения 
@@ -108,6 +124,7 @@
 .aligned-text {
   display: block;
   line-height: 1.15;
+  /*margin-top: 20px; без flex 111*/
 }
 
 .aligned-text_center {
@@ -118,10 +135,6 @@
 .aligned-text_right {
   line-height: 1;
   text-align: right;
-}
-
-.aligned-text_right_last {
-  letter-spacing: 0px;
 }
 
 /*класс для управления 
@@ -138,13 +151,13 @@
 }
 
 /*не нашла другого решения*/
-.aligned-text-center--down {
+/*.aligned-text-center--down {
   transform: translateY(20px);
 }
 
 .aligned-text--down {
   transform: translateY(40px);
-}
+}*/
 /*контейнер для подзаголовка и кнопки*/
 
 .cover__description {
@@ -153,8 +166,8 @@
   display: flex;
   justify-content: end;
   align-items: center;
-  padding-bottom: 32px; /*62px PP*/
-  padding-top: 30px; /*PP*/
+  padding-bottom: 22px; /*62px PP*/
+  /*padding-top: 30px;*/ /*PP*/
 }
 
 /*текст подзаголовка*/
@@ -173,7 +186,7 @@
 /*кнопка «Сделать ставку»*/
 .bet-button {
   color: #fff;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   text-align: center;
   font-size: 22px;
   font-style: normal;
@@ -207,7 +220,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
-  margin-bottom: 35px;
+  margin-bottom: 32px;
 }
 
 /*пункт списка карточки*/
@@ -298,7 +311,7 @@
 /*класс для колонок;*/
 .about__column {
   margin-bottom: 30px;
-  margin-top: 5px;
+  /*margin-top: 0px;*/
 }
 
 /*контейнер с логотипом;*/
@@ -313,7 +326,7 @@
   margin: 0 auto;
 }
 
-/*изображение логотипа;*/
+/*изображение логотипа;*/ /*я вижу так https://clip2net.com/s/4jPQrch*/
 .about__logo-image {
   width: 148px;
   height: 114px;
@@ -325,7 +338,7 @@
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 100px;
-  margin-top: 95px; /*нет*/
+  margin-top: 99px; /*нет*/
 }
 
 /*блок для текстов секции.*/
@@ -395,9 +408,9 @@
   margin-left: 48px;
 }
 
-/*У первого элемента в группе необходимо сбросить нижний отступ, я вроде сбросила, но не поняля зачем :) */
+/*готово, а зачем это? чтобы он не влиял на что-то? */
 .footer__social-list-item:first-child {
-  margin-bottom: 0;
+  margin-left: 0;
 }
 
 /*ссылка на социальные сети;*/
